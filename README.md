@@ -25,7 +25,7 @@ Add User
 🚀 Getting Started
 To run the project locally:
 
-git clone https://github.com/your-username/react-user-manager.git
+git clone https://github.com/Msl20/react-user-manager.git
 cd react-user-manager
 npm install
 npm start
