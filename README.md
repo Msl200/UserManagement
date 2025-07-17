@@ -26,7 +26,7 @@ Add User
 To run the project locally:
 
 git clone https://github.com/Msl200/UserManagement.git
-cd UserManagement
+cd form
 npm install
 npm start
 The app will start on http://localhost:3000. 📁 Project Structure /users - Displays the list of users
