@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Animation from "./Animation";
 const USER_KEY = "users";
 
 const getUsersFromStorage = () => JSON.parse(localStorage.getItem(USER_KEY)) || [];
@@ -92,43 +92,45 @@ const UserForm = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow rounded-2xl">
-      <h2 className="text-xl font-bold mb-10">{isEdit ? "ویرایش کاربر" : "افزودن کاربر"}</h2>
+    <Animation animationId={5}>
+      <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow rounded-2xl">
+        <h2 className="text-xl font-bold mb-10">{isEdit ? "ویرایش کاربر" : "افزودن کاربر"}</h2>
 
-      <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-8">
-        <img src={!!user.img ? user.img : "/img/emptyperson.jpg"} alt="" className="rounded-2xl mb-10  h-56" />
-        <div className="inputstyle w-full relative">
-          <input type="text" name="name" placeholder="" className=" border p-2 rounded w-full mb-2" value={user.name} onChange={handleChange} />
-          <label className="absolute pointer-events-none" htmlFor="">
-            نام
-          </label>
-        </div>
-        <div className="inputstyle w-full relative">
-          <input type="text" name="lastName" placeholder="" className="  border p-2 rounded w-full mb-2" value={user.lastName} onChange={handleChange} />
-          <label className="absolute pointer-events-none" htmlFor="">
-            نام خانوادگی
-          </label>
-        </div>
-        <div className="inputstyle w-full relative">
-          <input type="email" name="email" placeholder="" className="  border p-2 rounded w-full mb-2" value={user.email} onChange={handleChange} />
-          <label className="absolute pointer-events-none" htmlFor="">
-            ایمیل
-          </label>
-        </div>
+        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-8">
+          <img src={!!user.img ? user.img : "/img/emptyperson.jpg"} alt="" className="rounded-2xl mb-10  h-56" />
+          <div className="inputstyle w-full relative">
+            <input type="text" name="name" placeholder="" className=" border p-2 rounded w-full mb-2" value={user.name} onChange={handleChange} />
+            <label className="absolute pointer-events-none" htmlFor="">
+              نام
+            </label>
+          </div>
+          <div className="inputstyle w-full relative">
+            <input type="text" name="lastName" placeholder="" className="  border p-2 rounded w-full mb-2" value={user.lastName} onChange={handleChange} />
+            <label className="absolute pointer-events-none" htmlFor="">
+              نام خانوادگی
+            </label>
+          </div>
+          <div className="inputstyle w-full relative">
+            <input type="email" name="email" placeholder="" className="  border p-2 rounded w-full mb-2" value={user.email} onChange={handleChange} />
+            <label className="absolute pointer-events-none" htmlFor="">
+              ایمیل
+            </label>
+          </div>
 
-        <div className="flex justify-between w-[80%]">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-800 duration-200" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "در حال ذخیره..." : "ذخیره"}
-          </button>
-          <button type="button" onClick={() => navigate("/users")} className="bg-gray-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-gray-700 duration-200">
-            انصراف
-          </button>
-        </div>
-      </form>
+          <div className="flex justify-between w-[80%]">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-800 duration-200" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "در حال ذخیره..." : "ذخیره"}
+            </button>
+            <button type="button" onClick={() => navigate("/users")} className="bg-gray-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-gray-700 duration-200">
+              انصراف
+            </button>
+          </div>
+        </form>
 
-      {/* جایگاه نمایش نوتیف
+        {/* جایگاه نمایش نوتیف
       <ToastContainer /> */}
-    </div>
+      </div>
+    </Animation>
   );
 };
 
