@@ -1,12 +1,68 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React User Manager App
 
-Currently, two official plugins are available:
+A simple user management app built with React. Users are stored in the browser's `localStorage`, and you can add, edit, or delete them through an intuitive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Add new users via a form
+- Edit existing user information
+- Delete users with a confirmation modal
+- Display user list with avatars
+- Notifications using `react-toastify`
+- Fully responsive design with Tailwind CSS
+- Data persisted in `localStorage`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- React
+- React Router DOM
+- Tailwind CSS
+- React Toastify
+
+## 🖼 Screenshots
+
+### User List
+
+![User List](screenshots/user-list.png)
+
+### Add User Form
+
+![Add User](screenshots/add-user.png)
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+git clone https://github.com/your-username/react-user-manager.git
+cd react-user-manager
+npm install
+npm start
+```
+
+The app will start on http://localhost:3000.
+📁 Project Structure
+/users - Displays the list of users
+
+/add-user - Add a new user
+
+/edit-user/:id - Edit existing user info
+
+/* - 404 Not Found Page Will Be Show
+
+🎨 UI Highlights
+Custom animated input fields with floating labels
+
+Autofill-safe inputs (no background glitch)
+
+Confirmation modal before deleting users
+
+Toast notifications for actions
+
+Random profile image assignment on user creation
+
+🧑‍💻 Author
+Created by [Mahdi Soltani]
+📫 Contact: [m.soltani25984@gmail.com]
