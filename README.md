@@ -3,24 +3,20 @@ React User Manager App
 A simple user management app built with React. Users are stored in the browser's localStorage, and you can add, edit, or delete them through an intuitive UI.
 
 ✨ Features
-```Add new users via a form
+Add new users via a form
 Edit existing user information
 Delete users with a confirmation modal
 Display user list with avatars
 Notifications using react-toastify
 Fully responsive design with Tailwind CSS
 Data persisted in localStorage
-🛠 Tech Stack
 React
 React Router DOM
 Tailwind CSS
 React Toastify
-🖼 Screenshots
 User List
-User List
-Add User Form
 Add User
-```
+
 🚀 Getting Started
 To run the project locally:
 
