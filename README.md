@@ -42,6 +42,8 @@ Toast notifications for actions
 
 Random profile image assignment on user creation
 
+https://github.com/Msl200/UserManagement/issues/1#issue-3240145878
+
 🧑‍💻 Author Created by [Mahdi Soltani] 📫 Contact: [m.soltani25984@gmail.com]
 
 
